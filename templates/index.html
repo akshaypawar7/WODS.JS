@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='index.css') }}">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>APP</title>
+</head>
+<body>
+    <nav>
+        <i class='fas fa-server'></i>
+        <i class='fas fa-globe-americas'></i>
+        <i class='fas fa-newspaper'></i>
+        <i class='fas fa-calender-alt'></i>
+        <i class='fas fa-filter'></i>
+        <i class='fas fa-chart-pie'></i>
+        <i class='fas fa-user-alt'></i>
+    </nav>
+    <div class='tab'id='market'>
+        <h5>BROAD MARKET INDICES</h5>
+        <div class='miD'id='bmi'></div>
+	<div id='mChart'></div>
+        <h5>SECTORAL INDICES</h5>
+        <div class='miD'id='si'></div>
+    </div>
+</body>
+<script src="{{ url_for('static',filename='tradingview.js') }}"></script>
+<script src="{{ url_for('static',filename='market.js') }}"></script>
+</html>

@@ -1,0 +1,81 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --navWidth: 50px;
+    --dayMode: #f9fcfb;
+}
+body{
+    background-color: var(--dayMode);
+    font-family: 'poppins',sans-serif;
+}
+/* SmartPhone compatible + defualt css */
+nav{
+    width: 100%;
+    height: var(--navWidth);
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+}
+.fas{
+    font-size: 30px;
+    padding: 10px;
+    color: grey;
+}
+.tab{
+
+}
+.tab>h5{
+    color: grey;
+    padding: 10px;
+}
+/* Market Tab */
+.miD{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.indiWidget{
+	width: 30%;
+	border-radius: 7%;
+	text-align: center;
+}
+#mChart{
+	width: 100%;
+}
+
+
+/* Desktop compatible css */
+@media screen and (min-width:400px){
+    nav{
+        width: var(--navWidth);
+        height: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .miD{
+        width:50%;
+    }
+    .fa-chart-pie{
+        margin-top: auto;
+    }
+    .tab{
+        margin-left: var(--navWidth);
+        margin-bottom: 0;
+    }
+    #mChart{
+	    width: calc(50% - 25px);
+	    position: absolute;
+	    right: 0;
+	    top: 33px;
+    }
+
+
+}
+
